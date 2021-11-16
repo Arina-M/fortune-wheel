@@ -1,0 +1,321 @@
+html, body{
+    margin: 0;
+    background: #cccccc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.header-img{
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+.header-img::after{
+    background: transparent;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.banner{
+    background: url("images/gym.jpg");
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    /*padding: 40px 100px 0 0;*/
+
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: min(90%, 70.5rem);
+
+
+}
+.section{
+    padding: 50px 0;
+}
+
+.text-banner{
+    padding: 600px 0 0 0;
+    font-size: 2em;
+}
+
+.text{
+    padding: 50px 0 0 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.line::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: relative;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    /*background-image: -webkit-linear-gradient(#000000, rgba(0,0,0,0));*/
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+}
+
+
+#fortune-wheel div.sec:nth-child(1){
+    -webkit-transform: rotate(60deg);
+    border-color: #832c54 transparent;
+}
+#fortune-wheel div.sec:nth-child(2){
+    -webkit-transform: rotate(120deg);
+    border-color: #627473 transparent;
+}
+#fortune-wheel div.sec:nth-child(3){
+    -webkit-transform: rotate(180deg);
+    border-color: #34495e transparent;
+}
+#fortune-wheel div.sec:nth-child(4){
+    -webkit-transform: rotate(240deg);
+    border-color: #e7e3e3 transparent;
+}
+#fortune-wheel div.sec:nth-child(5){
+    -webkit-transform: rotate(300deg);
+    border-color: #a85c7f transparent;
+}
+#fortune-wheel div.sec:nth-child(6){
+    -webkit-transform: rotate(360deg);
+    border-color: #293540 transparent;
+}
+
+#fortune-wheel::before{
+    content: '';
+    position: absolute;
+    border: 4px solid rgba(0,0,0,0.1);
+    width: 242px;
+    height: 242px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+
+#fortune-wheel div.sec{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 130px 75px 0;
+    border-color: #19c transparent;
+    transform-origin: 75px 129px;
+    left: 50px;
+    top: -4px;
+    opacity: 1;
+}
+
+span.fa.discount1{
+    margin-top: -87px !important;
+    font-size: 15px !important;
+    margin-left: -33px !important;
+    width: 65px;
+}
+
+span.fa.discount2{
+    margin-left: -1px !important;
+    margin-top: -62px !important;
+}
+
+span.fa.discount3{
+    margin-top: -87px !important;
+    font-size: 15px !important;
+    margin-left: -33px !important;
+    width: 65px;
+    letter-spacing: 1px;
+}
+
+span.fa.discount4{
+    margin-left: -1px !important;
+    margin-top: -62px !important;
+}
+
+span.fa.discount5{
+    margin-top: -87px !important;
+    font-size: 15px !important;
+    margin-left: -33px !important;
+    width: 65px;
+}
+
+span.fa.discount6{
+    margin-left: -1px !important;
+    margin-top: -62px !important;
+    letter-spacing: 1px;
+
+
+}
+
+
+#wrapper{
+    margin: 40px auto 0;
+    width: 266px;
+    position: relative;
+
+}
+
+#fortune-wheel{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 8px solid #fff;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px, rgb(0 0 0 / 5%) 0px 3px 0px;
+    transform: rotate(0deg);
+
+
+
+}
+
+#fortune-wheel div.sec .fa{
+    transform: rotate(-90deg);
+    margin-top: -100px;
+    position: relative;
+    z-index: 10000000;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    margin-left: -15px;
+
+}
+
+
+#spin{
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -34px 0 0 -34px;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 10%) 0 3px 0;
+    z-index: 1000;
+    background: #fff;
+    cursor: pointer;
+    visibility: visible;
+
+
+}
+
+#spin::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 28px 20px;
+    border-color: transparent transparent #ffffff transparent;
+    top: -12px;
+    left: 14px;
+}
+
+/*#spin::after{*/
+/*    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';*/
+/*    content: "\f144";*/
+/*    font-weight: 900;*/
+/*    text-align: center;*/
+/*    line-height: 68px;*/
+/*    color: #a29e9e;*/
+/*    position: relative;*/
+/*    z-index: 100000;*/
+/*    width: 68px;*/
+/*    height: 68px;*/
+/*    display: block;*/
+/*    font-size: 27px;*/
+/*}*/
+
+.fa-play-circle{
+    text-align: center;
+    line-height: 68px;
+    color: #a29e9e;
+    position: relative;
+    z-index: 100000;
+    width: 68px;
+    height: 68px;
+    display: block;
+    font-size: 27px;
+    top: 26%;
+    right: 12%;
+    visibility: visible;
+
+}
+
+.fa-lock{
+    text-align: center;
+    line-height: 68px;
+    color: #a29e9e;
+    position: relative;
+    z-index: 100000;
+    width: 68px;
+    height: 68px;
+    display: block;
+    font-size: 27px;
+    top: -103%;
+    right: 12%;
+    visibility: hidden;
+
+}
+
+
+#inner-spin{
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -27px 0 0 -27px;
+    border-radius: 50%;
+    z-index: 999;
+    box-shadow: rgb(255 255 255) 0px -2px 0px inset, rgb(255 255 255) 0px 2px 0px inset, rgb(0 0 0 / 40%) 0px 0px 5px;
+    background: rgb(255,255,255);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%);
+}
+
+/*#spin2::after{*/
+/*    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';*/
+/*    content: "\f23e";*/
+/*    text-align: center;*/
+/*    line-height: 68px;*/
+/*    color: #f31616;*/
+/*    position: relative;*/
+/*    z-index: 100000;*/
+/*    width: 68px;*/
+/*    height: 68px;*/
+/*    display: block;*/
+/*    font-size: 27px;*/
+/*}*/
+
+
+
+@-webkit-keyframes spinRotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+
+    }
+    100% {
+        -webkit-transform: rotate(1822deg);
+        transform: rotate(1822deg);
+
+    }
+}

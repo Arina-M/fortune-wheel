@@ -1,0 +1,581 @@
+===============================html=========================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fortune wheel</title>
+<!--    CSS-->
+    <link href="style.css" rel="stylesheet">
+
+<!--    Icon-->
+    <link rel="icon" href="images/favicon.ico">
+
+<!--    Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<!--    External CSS -->
+    <link rel="stylesheet" href="libs/css/all.min.css">
+
+
+
+
+</head>
+<body>
+
+<!--        Banner photo-->
+        <div class="header-img banner" >
+            <div class="banner-content">
+                <div class="text-banner" style="color: #ffff;"></div>
+            </div>
+        </div>
+<!--        End banner photo-->
+
+<!--        Container-->
+        <div class="main-container">
+            <div class="section">
+                <div class="logo">
+                    <a href="http://strongj.com.ua/chenyahovskogo/"><img src="images/logo.png"></a>
+                </div>
+                <div class="text">
+                    Испытайте свою удачу!
+                    <br>
+                    <br>
+                    Выиграйте гарантированный приз
+                    <br>
+                    от фитнес-клуба Strong J !
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    Крутите колесо и выиграйте приз !
+                </div>
+                <div class="text new-text">
+                        Мы хотим Вас порадовать!
+                </div>
+                <div class="line"></div>
+            </div>
+
+        </div>
+
+<!--        End container-->
+
+
+
+<!--        Wheel-->
+        <div id="wrapper">
+            <div id="fortune-wheel">
+                <div id="inner-wheel">
+                    <div class="sec">
+                        <span class=" fa discount1">Скидка1</span>
+                    </div>
+                    <div class="sec">
+                        <span class=" fa discount2">Скидка2</span>
+                    </div>
+                    <div class="sec">
+                        <span class=" fa discount3">Скидка3</span>
+                    </div>
+                    <div class="sec">
+                        <span class=" fa discount4">Скидка4</span>
+                    </div>
+                    <div class="sec">
+                        <span class=" fa discount5">Скидка5</span>
+                    </div>
+                    <div class="sec">
+                        <span class=" fa discount6">Скидка6</span>
+                    </div>
+                </div>
+
+            </div>
+            <div id="spin" onclick="spinIt()">
+                <div id="inner-spin"></div>
+            </div>
+            <div id="spin2"></div>
+
+
+        </div>
+
+<!--        End wheel-->
+
+<script rel="script" src="script.js"></script>
+</body>
+</html>
+
+
+
+====================================================css==================================================================
+
+html, body{
+    margin: 0;
+    background: #cccccc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.header-img{
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+.header-img::after{
+    background: transparent;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.banner{
+    background: url("images/gym.jpg");
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    /*padding: 40px 100px 0 0;*/
+
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: min(90%, 70.5rem);
+
+
+}
+.section{
+    padding: 50px 0;
+}
+
+.text-banner{
+    padding: 600px 0 0 0;
+    font-size: 2em;
+}
+
+.text{
+    padding: 50px 0 0 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.line::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: relative;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    /*background-image: -webkit-linear-gradient(#000000, rgba(0,0,0,0));*/
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+}
+
+
+#fortune-wheel div.sec:nth-child(1){
+    -webkit-transform: rotate(60deg);
+    border-color: #832c54 transparent;
+}
+#fortune-wheel div.sec:nth-child(2){
+    -webkit-transform: rotate(120deg);
+    border-color: #627473 transparent;
+}
+#fortune-wheel div.sec:nth-child(3){
+    -webkit-transform: rotate(180deg);
+    border-color: #34495e transparent;
+}
+#fortune-wheel div.sec:nth-child(4){
+    -webkit-transform: rotate(240deg);
+    border-color: #e7e3e3 transparent;
+}
+#fortune-wheel div.sec:nth-child(5){
+    -webkit-transform: rotate(300deg);
+    border-color: #a85c7f transparent;
+}
+#fortune-wheel div.sec:nth-child(6){
+    -webkit-transform: rotate(360deg);
+    border-color: #293540 transparent;
+}
+
+#fortune-wheel::before{
+    content: '';
+    position: absolute;
+    border: 4px solid rgba(0,0,0,0.1);
+    width: 242px;
+    height: 242px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+
+#fortune-wheel div.sec{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 130px 75px 0;
+    border-color: #19c transparent;
+    transform-origin: 75px 129px;
+    left: 50px;
+    top: -4px;
+    opacity: 1;
+}
+
+span.fa.discount1{
+    margin-top: -87px !important;
+    font-size: 15px !important;
+    margin-left: -33px !important;
+    width: 65px;
+}
+
+span.fa.discount2{
+    margin-left: -1px !important;
+    margin-top: -62px !important;
+}
+
+span.fa.discount3{
+    margin-top: -87px !important;
+    font-size: 15px !important;
+    margin-left: -33px !important;
+    width: 65px;
+    letter-spacing: 1px;
+}
+
+span.fa.discount4{
+    margin-left: -1px !important;
+    margin-top: -62px !important;
+}
+
+span.fa.discount5{
+    margin-top: -87px !important;
+    font-size: 15px !important;
+    margin-left: -33px !important;
+    width: 65px;
+}
+
+span.fa.discount6{
+    margin-left: -1px !important;
+    margin-top: -62px !important;
+    letter-spacing: 1px;
+
+
+}
+
+
+#wrapper{
+    margin: 40px auto 0;
+    width: 266px;
+    position: relative;
+
+}
+
+#fortune-wheel{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 8px solid #fff;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px, rgb(0 0 0 / 5%) 0px 3px 0px;
+    transform: rotate(0deg);
+
+    /*animation-fill-mode: both !important;*/
+
+}
+
+#fortune-wheel div.sec .fa{
+    transform: rotate(-90deg);
+    margin-top: -100px;
+    position: relative;
+    z-index: 10000000;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    margin-left: -15px;
+
+}
+
+
+#spin{
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -34px 0 0 -34px;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 10%) 0 3px 0;
+    z-index: 1000;
+    background: #fff;
+    cursor: pointer;
+    visibility: visible;
+
+
+}
+
+#spin::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 28px 20px;
+    border-color: transparent transparent #ffffff transparent;
+    top: -12px;
+    left: 14px;
+}
+
+#spin::after{
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    content: "\f144";
+    font-weight: 900;
+    text-align: center;
+    line-height: 68px;
+    color: #a29e9e;
+    position: relative;
+    z-index: 100000;
+    width: 68px;
+    height: 68px;
+    display: block;
+    font-size: 27px;
+}
+
+#inner-spin{
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -27px 0 0 -27px;
+    border-radius: 50%;
+    background: red;
+    z-index: 999;
+    box-shadow: rgb(255 255 255) 0px -2px 0px inset, rgb(255 255 255) 0px 2px 0px inset, rgb(0 0 0 / 40%) 0px 0px 5px;
+    background: rgb(255,255,255);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%);
+}
+
+/*#spin2::after{*/
+/*    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';*/
+/*    content: "\f23e";*/
+/*    text-align: center;*/
+/*    line-height: 68px;*/
+/*    color: #f31616;*/
+/*    position: relative;*/
+/*    z-index: 100000;*/
+/*    width: 68px;*/
+/*    height: 68px;*/
+/*    display: block;*/
+/*    font-size: 27px;*/
+/*}*/
+
+
+
+@-webkit-keyframes spinRotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+
+    }
+    100% {
+        -webkit-transform: rotate(1822deg);
+        transform: rotate(1822deg);
+
+
+    }
+}
+
+=================================================================js==================================================================
+
+/*let degree = 1800;
+let clicks = 0;
+function fun (){
+    ('#spin').click(function(){
+        clicks ++;
+        let newDegree = degree*clicks;
+        let extraDegree = 385;
+        let totalDegree = newDegree+extraDegree;
+        ('#fortune-wheel .sec').forEach(function(){
+            let t = this;
+            let noY = 0;
+            let c = 0;
+            let n = 700;
+            let interval = setInterval(function () {
+                c++;
+                if (c === n) {
+                    clearInterval(interval);
+                }
+                let aoY = t.offset().top;
+                ("#txt").innerHTML(aoY);
+                console.log(aoY);
+                if(aoY < 23.89){ console.log('<<<<<<<<');
+                    ('#spin').addClass('spin');
+                    setTimeout(function () {
+                        ('#spin').removeID('spin');
+                    }, 100);
+                }
+            }, 10);
+            ('#inner-wheel').style({ 'transform' : 'rotate(' + totalDegree + 'deg)' });
+            noY = t.offset().top;
+        });
+    });
+}
+
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function changeHref() {
+    window.location.href='https://vc-education.ru/rozygrysh_win1';
+    var user=getCookie("username");
+    if (user == "") {
+        user = "username";
+        if (user != "" && user != null) {
+            setCookie("username", user, 300);
+            $("#spin").hide();
+            $("#spin2").css('display','block'); }
+    }
+}
+var wheelCookie = getCookie("username");
+if (wheelCookie == "username") {
+    $("#spin").hide();
+    $("#spin2").css('display','block');
+    console.log('coockies_full');
+}
+else {
+    $("#spin").show();
+    console.log('coockies_empty');
+}
+*/
+/*function changeHref() { window.location.href='https://vc-education.ru/rozygrysh_win1'; /*var date = new Date(); date.setTime(date.getTime() + (60 * 2000));*/ /*$.cookie("wheel", "", {expires: 2, path: '/' }); $("#spin").hide(); $("#spin2").css('display','block'); }; if ( $.cookie("popup") == null ){ $("#spin").show(); console.log('true'); } else { $("#spin").hide(); $("#spin2").css('display','block'); console.log('false'); }*/
+
+
+
+
+
+//------------------------------------------------------------------------------------
+
+let clicks = 0;
+// let degrees = 1800;
+let wheel = document.querySelector('#fortune-wheel');
+function spinIt() {
+        clicks++;
+        // if (clicks > 0) {
+            wheel.style.animation = "spinRotation 3.5s";
+            wheel.style.transition = "1.5s ease-out";
+            wheel.style.animationFillMode = "both";
+            wheel.style.transformOrigin = "center";
+            console.log(clicks+" >>");
+            // document.querySelector('#spin').style.visibility = "hidden";
+        // }
+
+}
+
+// console.log(window.getComputedStyle(document.querySelector('#inner-spin'), ':after'));
+
+
+function setItemToLocaleStorage(){
+
+}
+
+function getItemFromLocaleStorage(){
+    localeStorage.setItem();
+}
+
+
+        /*clicks++;
+    let newDegree = degrees * clicks;
+    let extraDegree = 385;
+    let totalDegree = newDegree + extraDegree;
+    document.getElementById('#inner-wheel .sec').forEach(function () {
+        let t = this;
+        let noY = 0;
+        let c = 0;
+        let n = 700;
+        let interval = setInterval(function () {
+            c++;
+            if (c === n) {
+                clearInterval(interval);
+            }
+            let aoY = t.offset().top;
+            //("#txt").innerHTML(aoY);
+            console.log(aoY);
+            if (aoY < 23.89) {
+                console.log('<<<<<<<<');
+                document.querySelector('#spin').classList.add('spin');
+                setTimeout(function () {
+                    document.querySelector('#spin').classList.remove('spin');
+                }, 100);
+            }
+        }, 10);
+
+        wheel.style.transform = 'rotate(' + totalDegree + 'deg)';
+        noY = t.offset().top;
+
+
+    });*/
+
+    //====================================================================
+
+
+
+
+
+
+
+
+
+
+// document.onclick = function (event){
+//     console.log(event.code);
+// }
+// //
+// function click() {
+//     // wheelBnt.style.transform = "rotate(1800deg);";
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
