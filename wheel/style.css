@@ -224,7 +224,7 @@ span.fa.discount6{
 
 
 #wrapper{
-    margin: 10% 19% ; /*40px auto 70px*/
+    margin: 20% 19% ; /*40px auto 70px*/
     width: 416px;
     position: relative;
 
@@ -416,6 +416,28 @@ h4{
     margin-bottom: 0;
     display: inline;
 }
+
+
+.textToSpin{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    position: absolute;
+    top: -55%;
+    left: 21%;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 2;
+    /*width: 10%;*/
+    /*height: 60px;*/
+}
+
+
+
+
+
+
+
+
 
 
 
