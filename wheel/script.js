@@ -1,35 +1,4 @@
 
-/*
-let keyframes;
-keyframes.insertRule("0% {
-    -webkit-transform: translate(100px, 100px) rotate(" + (multiplier + 0) + "deg)
-translate(-100px, -100px) rotate(" + (multiplier + 0) + "deg);
-background-color: red;
-}");
-keyframes.insertRule("13% {
-    -webkit-transform: translate(100px, 100px) rotate(" + (multiplier + 45) + "deg)
-translate(-100px, -100px) rotate(" + (multiplier + 45) + "deg);
-}");
-
-
-// Gets the browser prefix
-let browserPrefix;
-let navigator;
-navigator.sayswho = (function(){
-    let N = navigator.appName, ua = navigator.userAgent, tem;
-    let M = ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
-    if(M && (tem = ua.match(/version\/([\.\d]+)/i))!= null) M[2] = tem[1];
-    M = M? [M[1], M[2]]: [N, navigator.appVersion,'-?'];
-    M = M[0];
-    if(M === "Chrome") { browserPrefix = "webkit"; }
-    if(M === "Firefox") { browserPrefix = "moz"; }
-    if(M === "Safari") { browserPrefix = "webkit"; }
-    if(M === "MSIE") { browserPrefix = "ms"; }
-});
-*/
-
-
-
 let discountArr = [['-67% на персональные тренировки', 60],
                    ['-73% на гостевой абонемент', 180],
                    ['-50% на солярий', 240]];
@@ -45,7 +14,8 @@ let lock = document.querySelector('.fa-lock');
 //spinning
 function spinIt() {
     clicks++;
-    //random degrees
+
+
     degrees = 2800;
     console.log(degrees);
     wheel.style.transition = "all 6s ease-out";
@@ -53,10 +23,6 @@ function spinIt() {
     wheel.style.animationFillMode = "both";
     console.log(clicks + " >>");
 
-    //static degrees
-    //  wheel.style.animation = "spinRotation 3.5s";
-    // wheel.style.animationFillMode = "both";
-    // wheel.style.transformOrigin = "center";
 
 
     play.style.visibility = "hidden";
@@ -100,6 +66,8 @@ function getColour(){
 }
 */
 
+
+//scrolling
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 
     link.addEventListener('click', function(e) {

@@ -1,12 +1,30 @@
 
-/*@media (max-width: 1520px){*/
-/*    .prizes{*/
-/*        position: initial;*/
-/*    }*/
-/*    .button{*/
-/*        left: 50%;*/
-/*    }*/
-/*}*/
+@media (max-width: 1520px){
+    .banner{
+        background: url("images/banner/9.png");
+    }
+    .prizes{
+        /*position: initial;*/
+        left: 40%;
+        bottom: -181%;
+    }
+    .button{
+        /*left: 50%;*/
+    }
+    #wrapper{
+        margin: 15% 10% 65% 36%;
+        width: 465px;
+    }
+    #spin{
+        margin: -7% -12%;
+    }
+    .textToSpin{
+        left: 16%;
+    }
+    .prizes{
+        left: -10%;
+    }
+}
 
 
 
@@ -78,10 +96,10 @@
 
 
     #spin{
-        left: 48%;
+        left: 53%;
         top: 49%;
-        width: 80px;
-        height: 80px;
+        width: 82px;
+        height: 82px;
 
     }
 
