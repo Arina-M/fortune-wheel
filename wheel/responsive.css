@@ -35,26 +35,60 @@
 
     #wrapper{
         margin: 30% 10% 100% 28%;
-
+        width: 465px;
     }
 
     #fortune-wheel{
-        width: 425px;
-        height: 425px;
+        width: 450px;
+        height: 450px;
     }
     #fortune-wheel::before{
-        width: 416px;
-        height: 416px;
+        width: 440px;
+        height: 440px;
     }
     #fortune-wheel div.sec{
-        width: 36px;
-        border-width: 183px 108px 0;
-        transform-origin: 126px 213px;
-        left: 85px;
-        top: 0;
+        width: 42px;
+        border-width: 213px 136px 0;
+        transform-origin: 157px 248px;
+        left: 67px;
+        top: -5%;
     }
+
+    span.fa.discount1{
+        margin-top: -112px !important;
+        font-size: 23px !important;
+        margin-left: -36px !important;
+        width: 101px;
+    }
+    span.fa.discount2{
+        margin-left: -78px !important;
+        margin-top: -132px !important;
+        width: 175px;
+        font-size: 23px !important;
+    }
+    span.fa.discount3{
+        font-size: 23px !important;
+        width: 100px;
+    }
+    span.fa.discount4, span.fa.discount5, span.fa.discount6{
+        font-size: 23px !important;
+
+    }
+
+
+
     #spin{
-        left: 52%;
+        left: 48%;
+        top: 49%;
+        width: 80px;
+        height: 80px;
+
+    }
+
+    #spin::before{
+        top: -15px;
+        left: 20px;
+
     }
 
 
@@ -76,7 +110,7 @@
     }
 
     .fa-instagram, .fa-facebook-f{
-        font-size: 37px;
+        font-size: 42px;
         left: 40%;
     }
 }
