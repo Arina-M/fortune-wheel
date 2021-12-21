@@ -1,0 +1,83 @@
+
+/*@media (max-width: 1520px){*/
+/*    .prizes{*/
+/*        position: initial;*/
+/*    }*/
+/*    .button{*/
+/*        left: 50%;*/
+/*    }*/
+/*}*/
+
+
+
+
+@media (max-width: 1000px){
+    .banner{
+        height: 50vh;
+        background: url("images/banner/9.png");
+    }
+
+    .bannerLogo{
+        right: 8%;
+    }
+    .bannerText{
+        display: flex;
+        justify-content: center;
+        top: 50%;
+        right: 7%;
+    }
+    .button{
+        left: 40%;
+        top: 75%;
+        width: 200px;
+        height: 75px;
+    }
+
+    #wrapper{
+        margin: 30% 10% 100% 28%;
+
+    }
+
+    #fortune-wheel{
+        width: 425px;
+        height: 425px;
+    }
+    #fortune-wheel::before{
+        width: 416px;
+        height: 416px;
+    }
+    #fortune-wheel div.sec{
+        width: 36px;
+        border-width: 183px 108px 0;
+        transform-origin: 126px 213px;
+        left: 85px;
+        top: 0;
+    }
+    #spin{
+        left: 52%;
+    }
+
+
+    .textToSpin{
+        top: -50%;
+        left: 19%;
+
+    }
+
+    .prizes{
+        /*position: initial;*/
+        left: -24%;
+        bottom: -185%;
+        width: 150%;
+        height: 740px;
+    }
+    .prize-descrip{
+        font-size: 20px;
+    }
+
+    .fa-instagram, .fa-facebook-f{
+        font-size: 37px;
+        left: 40%;
+    }
+}
+

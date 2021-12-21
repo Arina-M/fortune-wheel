@@ -52,11 +52,12 @@ html, body{
     position: absolute;
     top: 55%; /*365*/
     right: 0%; /*0*/
-    /*width: 700px;*/
+    width: 700px;
     height: 45%;
-    width: min(37%, 70.5rem);
+    /*width: min(37%, 70.5rem);*/
     line-height: 3rem;
 }
+
 
 
 .button{
@@ -154,6 +155,7 @@ a{
     border: 8px solid #fff;
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px, rgb(0 0 0 / 5%) 0px 3px 0px;
     transform: rotate(0deg);
+    /*color: white;*/
 }
 
 #fortune-wheel div.sec{
@@ -208,7 +210,7 @@ a{
 #fortune-wheel div.sec:nth-child(3){
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
-    border-color: #a6bd48 transparent;
+    border-color: #a7bd4b transparent;
 }
 
 #fortune-wheel div.sec:nth-child(4){
@@ -353,7 +355,7 @@ span.fa.discount6{
     display: inline-block;
     justify-content: right;
     width: 120%;
-    height: 620px;
+    height: 650px;
     left: 170%;
     bottom: -20%;
 }
@@ -364,12 +366,17 @@ li{
 
 }
 
-.prize-descrip, h1{
+.prize-descrip{
     width: min(80%, 70.5rem);
     margin-left: 5%;
-    /*font-size: 1.2em;*/
     letter-spacing: 1px;
     line-height: 1.5;
+}
+h1{
+    font-size: 3em;
+    margin-left: 5%;
+    letter-spacing: 2px;
+
 }
 
 .line-2::before{
