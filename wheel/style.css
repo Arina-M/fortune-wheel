@@ -155,7 +155,6 @@ a{
     border: 8px solid #fff;
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px, rgb(0 0 0 / 5%) 0px 3px 0px;
     transform: rotate(0deg);
-    /*color: white;*/
 }
 
 #fortune-wheel div.sec{
@@ -169,6 +168,7 @@ a{
     left: 84px; /*50*/
     top: -10px;/*-4*/
     opacity: 1;
+
 }
 
 #fortune-wheel div.sec .fa{
@@ -440,9 +440,7 @@ h4{
 
 
 
-
-
-@-webkit-keyframes spinRotation {
+@keyframes spinRotation2800 {
     0% {
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -450,9 +448,108 @@ h4{
 
     }
     100% {
-        -webkit-transform: rotate(1822deg);
-        -moz-transform: rotate(1822deg);
-        transform: rotate(1822deg);
+        -webkit-transform: rotate(2800deg);
+        -moz-transform: rotate(2800deg);
+        transform: rotate(2800deg);
 
     }
+}
+
+@keyframes spinRotation3070 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(3070deg);
+        -moz-transform: rotate(3070deg);
+        transform: rotate(3070deg);
+    }
+}
+
+@keyframes spinRotation3016 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(3016deg);
+        -moz-transform: rotate(3016deg);
+        transform: rotate(3016deg);
+    }
+}
+
+
+
+
+
+
+
+.popUp-container{
+    width:100%;
+    min-height:100%;
+    background-image: url("22.png");
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    /*visibility: hidden;*/
+    visibility: visible;
+    animation: fadeIn 1s;
+    z-index: 10;
+
+
+}
+
+.popUp-body{
+    margin:40px auto 0px auto;
+    width: 30%;
+    height: 400px;
+    padding:10px;
+    background-color: rgba(255,255,255,0.89);
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #dd2a1b;
+
+    text-align: center;
+
+}
+
+.textTime{
+    font-size: 20px;
+}
+
+.wonPrize{
+    /*border: 1px solid;*/
+    font-size: 20px;
+}
+
+.btn{
+    width: 150px;
+    height: 50px;
+    margin: 2% 2% 3% -4%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    /*border: black;*/
+    color: black;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #ffffff2e;
+    z-index: 10;
+    transition: all 0.4s;
+    /*font-family: "Gotham Pro", sans-serif;*/
+    border-radius: 20px;
+}
+
+
+.btn:hover{
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 20px rgba(221, 42, 27);
+}
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
