@@ -1,7 +1,7 @@
 
 @media (max-width: 1520px){
     .banner{
-        background: url("images/banner/9.png");
+        background: url("images/banner/11.png");
     }
     .prizes{
         /*position: initial;*/
@@ -9,7 +9,7 @@
         bottom: -181%;
     }
     .button{
-        /*left: 50%;*/
+        left: 73%;
     }
     #wrapper{
         margin: 15% 10% 65% 36%;
@@ -25,6 +25,28 @@
         left: -10%;
     }
 }
+
+
+@media (max-width: 1370px){
+
+    .bannerLogo{
+        height: 37%;
+
+    }
+    .bannerText{
+        width: 530px;
+        font-size: 1.7em;
+    }
+
+
+    .btn{
+        margin: 2% 2% 3% -5.5%;
+    }
+}
+
+
+
+
 
 
 
