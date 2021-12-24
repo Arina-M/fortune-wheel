@@ -13,7 +13,7 @@
     }
     #wrapper{
         margin: 15% 10% 65% 36%;
-        width: 465px;
+        width: 35%;
     }
     #spin{
         margin: -7% -12%;
@@ -29,8 +29,14 @@
 
 @media (max-width: 1370px){
 
+    .banner{
+
+        height: 79vh;
+
+    }
     .bannerLogo{
         height: 37%;
+
 
     }
     .bannerText{
@@ -84,7 +90,7 @@
 
     #wrapper{
         margin: 70% 10% 226% 8%;
-        /*width: 465px;*/
+        width: 82%;
     }
 
     #fortune-wheel{
