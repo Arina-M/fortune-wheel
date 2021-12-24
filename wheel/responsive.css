@@ -38,7 +38,6 @@
         font-size: 1.7em;
     }
 
-
     .btn{
         margin: 2% 2% 3% -5.5%;
     }
@@ -54,104 +53,117 @@
 @media (max-width: 1200px){
     .banner{
         height: 50vh;
-        background: url("images/banner/9.png");
+        background: url("images/banner/tele.png");
     }
 
     .bannerLogo{
-        right: 8%;
+        right: 13%;
+        height: 40%;
     }
     .bannerText{
         display: flex;
         justify-content: center;
-        top: 50%;
-        right: 7%;
+        top: 48%;
+        right: 0%;
+        font-size: 18px;
+        line-height: 30px;
+        width: 88%;
     }
+
     .button{
-        left: 40%;
+        left: 35%;
         top: 75%;
-        width: 200px;
-        height: 75px;
+        width: 125px;
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .text{
+        font-size: 1.5em;
     }
 
     #wrapper{
-        margin: 30% 10% 100% 28%;
-        width: 465px;
+        margin: 70% 10% 226% 8%;
+        /*width: 465px;*/
     }
 
     #fortune-wheel{
-        width: 450px;
-        height: 450px;
+        width: 300px;
+        height: 300px;
     }
     #fortune-wheel::before{
-        width: 440px;
-        height: 440px;
+        width: 290px;
+        height: 290px;
     }
     #fortune-wheel div.sec{
-        width: 42px;
-        border-width: 213px 136px 0;
+        width: 26px;
+        border-width: 226px 144px 0;
         transform-origin: 157px 248px;
-        left: 67px;
-        top: -5%;
+        left: -4px;
+        top: -32%;
     }
 
     span.fa.discount1{
-        margin-top: -112px !important;
-        font-size: 23px !important;
-        margin-left: -36px !important;
-        width: 101px;
+        margin-top: -93px !important;
+        font-size: 17px !important;
+        margin-left: -48px !important;
+        width: 116px;
     }
     span.fa.discount2{
-        margin-left: -78px !important;
-        margin-top: -132px !important;
-        width: 175px;
-        font-size: 23px !important;
+        margin-left: -45px !important;
+        margin-top: -104px !important;
+        width: 116px;
+        font-size: 16px !important;
     }
     span.fa.discount3{
-        font-size: 23px !important;
-        width: 100px;
+        font-size: 18px !important;
+        margin-left: -42px !important;
+        margin-top: -96px !important;
     }
     span.fa.discount4, span.fa.discount5, span.fa.discount6{
-        font-size: 23px !important;
+        font-size: 19px !important;
+        margin-left: -25px !important;
+        margin-top: -100px !important;
 
     }
 
 
 
     #spin{
-        left: 53%;
-        top: 49%;
-        width: 82px;
-        height: 82px;
-
+        left: 54%;
+        top: 47%;
+        width: 65px;
+        height: 65px;
     }
 
     #spin::before{
-        top: -15px;
-        left: 20px;
-
+        top: -18%;
+        left: 20%;
     }
 
 
     .textToSpin{
-        top: -50%;
-        left: 19%;
-
+        top: -85%;
+        left: 24%;
+        font-size: 10px;
     }
 
     .prizes{
+        font-size: 11px;
         /*position: initial;*/
-        left: -24%;
-        bottom: -185%;
-        width: 150%;
+        left: 1%;
+        bottom: -252%;
+        width: 100%;
         height: 740px;
     }
+
     .prize-descrip{
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .fa-instagram, .fa-facebook-f{
-        font-size: 42px;
-        left: 40%;
+
+        left: 25%;
     }
 
 
