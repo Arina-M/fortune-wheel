@@ -28,6 +28,10 @@ console.log(discName);
 
 //spinning
 function spinIt() {
+    if(window.localStorage.getItem("spin_used") == '1') {
+        return false;
+    }
+
     clicks++;
     if(degrees === 2800){
         wheel.style.transition = "all 6s ease-out";
@@ -58,16 +62,14 @@ function spinIt() {
         // console.log(setTimeout(showPopUp, 3600));
         setTimeout(showPopUp, 6000);
         setTimeout(timer, 6000);
-
     }
-
-
 
     console.log(clicks + " >>");
 
     play.style.visibility = "hidden";
     lock.style.visibility = "visible";
 
+    window.localStorage.setItem("spin_used", "1");
 
 }
 
@@ -103,12 +105,15 @@ function showPopUp(){
 }
 
 
-
+function goHome() {
+    document.location = 'http://strongj.com.ua';
+}
 
 //timer
 function startTimer(duration, display) {
     let timer = duration, minutes, seconds;
-    setInterval(function () {
+
+    let intervalPtr = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -118,8 +123,11 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+            clearInterval(intervalPtr);
+            goHome();
         }
+
+
     }, 1000);
 }
 
@@ -131,30 +139,53 @@ function timer () {
 }
 
 
+document.addEventListener("DOMContentLoaded", function(event) {
 
+    if(window.localStorage.getItem("spin_used") == '1') {
+        play.style.visibility = "hidden";
+        lock.style.visibility = "visible";
+    }
 
+    // console.log(window.localStorage.getItem("spin_used"));
+    // $('#go-to-wheel-btn').click(function(e){
+    //     $(this).attr('id', '');
+    //     $('#go-to-wheel').click();
+    // });
 
-
-
-
-//scrolling
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        let href = this.getAttribute('href').substring(1);
-
-        const scrollTarget = document.getElementById(href);
-
-        const topOffset = document.querySelector('.scrollto').offsetHeight;
-        // const topOffset = 0; // если не нужен отступ сверху
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
-
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: 'smooth'
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
         });
-    });
 });
+

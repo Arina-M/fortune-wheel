@@ -1,74 +1,71 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('fonts/GothamPro/GothamPro-Italic.eot');
+    src: local('Gotham Pro Italic'), local('GothamPro-Italic'),
+    url('fonts/GothamPro/GothamPro-Italic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/GothamPro/GothamPro-Italic.woff') format('woff'),
+    url('fonts/GothamPro/GothamPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+
 html, body{
     margin: 0;
+    padding: 0;
     background: #cccccc;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gotham Pro', sans-serif;
+    font-style: italic;
 }
 
+.sec span{
+    font-family: 'Gotham Pro', sans-serif;
+    font-style: italic;
+}
 
 /* HEADER BANNER SECTION */
-.header-img{
-    position: relative;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-}
-
-/*
-.header-img::after{
-    background: transparent;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 100%);
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 100%);
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-}
-*/
 
 .banner{
-    background: url("images/banner/8.png");
+    background: #0b0b0b url("images/banner/b1080.jpg");
+    background-size: contain;
     width: 100%;
     height: 100vh;
 }
 
-.bannerLogo{
-    display: flex;
-    justify-content: right;
-    position: absolute;
-    top: 8%;
-    right: 4%;
-    width: 80%;
-    height: 40%;
+.header-img{
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
 
+
+.banner-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+}
+
+.banner-content div{
+    width: 35vw;
+    margin:0 10px 80px 0;
 }
 
 .bannerText{
     font-size: 2em;
     color: #ffffff;
-    display: flex;
-    justify-content: right;
-    position: absolute;
-    top: 55%; /*365*/
-    right: 0%; /*0*/
-    width: 700px;
-    height: 45%;
-    /*width: min(37%, 70.5rem);*/
+    max-width: 700px;
     line-height: 3rem;
 }
-
-
 
 .button{
     width: 170px;
     height: 65px;
-    left: 75%;
-    top: 80%;
-    position: absolute;
     background: rgba(255, 255, 255, 0.068);
     font-size: 1.5rem;
-    /*border: none;*/
     color: white;
     outline: none;
     cursor: pointer;
@@ -76,21 +73,22 @@ html, body{
     z-index: 10;
     transition: all 0.4s;
     font-family: "Gotham Pro", sans-serif;
+    font-style: italic;
     border-radius: 20px;
 }
 
 .button:hover{
     backdrop-filter: blur(10px);
-    box-shadow: 0px 10px 20px rgba(221, 42, 27);
+    box-shadow: 0 10px 20px rgb(221, 42, 27);
 }
 
 a{
     text-decoration: none;
     font-family: "Gotham Pro", sans-serif;
+    font-style: italic;
     color: white;
+    padding: 20px;
 }
-
-
 
 
 /* MAIN TEXT SECTION */
@@ -108,13 +106,13 @@ a{
 }
 
 .text-banner{
-    padding: 600px 0 0 0;
+    /*padding: 600px 0 0 0;*/
     font-size: 2em;
     height: 210px;
 }
 
 .text{
-    padding: 130px 0 0 0;
+    /*padding: 130px 0 0 0;*/
     font-size: 2em;
     text-align: center;
 }
@@ -134,17 +132,16 @@ a{
 }
 
 
-
-
-
-
 /* WHEEL SECTION */
 #wrapper{
-    margin: 15% 19% ;
-    width: 22%;
-    position: relative;
-
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+/*.wrapper-flex{*/
+/*    display:flex;*/
+/*}*/
 
 #fortune-wheel{
     width: 400px; /*250*/
@@ -153,7 +150,7 @@ a{
     position: relative;
     overflow: hidden;
     border: 8px solid #fff;
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px, rgb(0 0 0 / 5%) 0px 3px 0px;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 10px, rgb(0 0 0 / 5%) 0 3px 0;
     transform: rotate(0deg);
 }
 
@@ -232,16 +229,16 @@ a{
 }
 
 span.fa.discount1{
-    margin-top: -103px !important;
-    font-size: 20px !important;
+    margin-top: -94px !important;
+    font-size: 19px !important;
     margin-left: -32px !important;
     width: 80px;
 }
 
 span.fa.discount2{
-    margin-left: -70px !important;
-    margin-top: -120px !important;
-    width: 153px;
+    margin-left: -69px !important;
+    margin-top: -139px !important;
+    width: 169px;
     font-size: 20px !important;
 }
 
@@ -279,7 +276,7 @@ span.fa.discount6{
     width: 68px;
     height: 68px;
     position: absolute;
-    top: 50%;
+    top: 372px;
     left: 50%;
     margin: -8% -7%; /*-34px 0 0 -34px*/
     border-radius: 50%;
@@ -288,6 +285,11 @@ span.fa.discount6{
     background: #fff;
     cursor: pointer;
     visibility: visible;
+}
+
+#wheel-box{
+    position: relative;
+    max-width: 416px;
 }
 
 #spin::before{
@@ -331,7 +333,6 @@ span.fa.discount6{
     top: -103%;
     right: 12%;
     visibility: hidden;
-
 }
 
 #inner-spin{
@@ -351,23 +352,22 @@ span.fa.discount6{
 .prizes{
     background: #141515;
     color: #ffffff;
-    position: absolute;
-    display: inline-block;
+    /*position: absolute;*/
+    /*display: inline-block;*/
     justify-content: right;
-    width: 120%;
-    height: 650px;
-    left: 170%;
-    bottom: -20%;
+    min-width: 400px;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px;
 }
 
 li{
     list-style-type: none;
     margin-bottom: 2%;
-
 }
 
 .prize-descrip{
-    width: min(80%, 70.5rem);
+    /*width: min(80%, 70.5rem);*/
     margin-left: 5%;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -376,7 +376,6 @@ h1{
     font-size: 3em;
     margin-left: 5%;
     letter-spacing: 2px;
-
 }
 
 .line-2::before{
@@ -398,47 +397,43 @@ h4{
 }
 
 .textToSpin{
-    position: absolute;
-    top: -55%;
-    left: 21%;
+    /*position: absolute;*/
+    /*top: -55%;*/
+    /*left: 21%;*/
     text-align: center;
     letter-spacing: 1px;
-    line-height: 2;
+    /*line-height: 2;*/
 }
-
-
-
-
 
 /* FOOTER */
 .footer{
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*width: 100%;*/
     height: 70px;
     background: #141515;
 }
 
 .fa-instagram, .fa-facebook-f{
     color: #cccccc;
-    font-size: 30px;
+    font-size: 1.6em;
     width: 68px;
     height: 68px;
     line-height: 68px !important;
-    position: relative;
-    display: inline-block !important;
+    /*position: relative;*/
+    /*display: inline-block !important;*/
     justify-content: center;
-    left: 45%;
+    /*left: 45%;*/
     /*padding: 0 40px 0 0 ;*/
-    margin-left: 40px;
-
+    /*margin-left: 40px;*/
 }
 
 .fa-instagram:hover, .fa-facebook-f:hover{
-    font-size: 35px;
+    font-size: 1.7em;
     transition: 0.2s;
     color: #dd2a1b;
 }
-
-
 
 @keyframes spinRotation2800 {
     0% {
@@ -491,9 +486,10 @@ h4{
     width:100%;
     min-height:100%;
     background-image: url("22.png");
+    background-size: cover;
     overflow:hidden;
     position:fixed;
-    top:0px;
+    top:0;
     /*visibility: hidden;*/
     visibility: visible;
     animation: fadeIn 1s;
@@ -503,13 +499,13 @@ h4{
 }
 
 .popUp-body{
-    margin:40px auto 0px auto;
-    width: 30%;
+    margin:40px auto 0 auto;
+    width: 40%;
     height: 400px;
     padding:10px;
     background-color: rgba(255,255,255,0.89);
     border-radius:5px;
-    box-shadow: 0px 0px 10px #dd2a1b;
+    box-shadow: 0 0 10px #dd2a1b;
 
     text-align: center;
 
@@ -525,14 +521,12 @@ h4{
 }
 
 .btn{
-    width: 150px;
+    width: 192px;
     height: 50px;
-    margin: 2% 2% 3% -4%;
-    position: absolute;
     background: rgba(0, 0, 0, 0.5);
     font-size: 15px;
-    /*border: black;*/
     color: black;
+    margin-top: 60px;
     outline: none;
     cursor: pointer;
     border: 1px solid #ffffff2e;
@@ -545,11 +539,22 @@ h4{
 
 .btn:hover{
     backdrop-filter: blur(10px);
-    box-shadow: 0px 10px 20px rgba(221, 42, 27);
+    box-shadow: 0 10px 20px rgb(221, 42, 27);
 }
 
 
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+}
+
+.scrollto{
+    /*margin-right: 150px;*/
+    padding-top: 50px;
+    text-align: center;
+}
+
+.bannerLogo img{
+    max-width: 25vw;
+    padding-top: 20px;
 }
