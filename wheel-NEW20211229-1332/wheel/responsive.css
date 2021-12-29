@@ -1,0 +1,204 @@
+
+
+@media (max-width: 1520px){
+    .banner-content div{
+        width: 30vw;
+    }
+}
+
+
+@media (max-width: 1370px){
+
+    .banner-content div{
+        width: 30vw;
+    }
+
+    .bannerLogo{
+        height: 32%;
+    }
+
+    .bannerLogo img{
+        max-width: 25vw;
+        padding-top: 20px;
+    }
+
+    .bannerText{
+        max-width: 530px;
+        font-size: 1.7em;
+        margin-left: 5px;
+    }
+}
+
+
+@media (max-width: 1200px){
+
+    .banner-content{
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .banner{
+        height: 400px;
+        background-image: url("images/banner/b400.jpg");
+        background-color: #0b0b0b;
+    }
+
+    .banner-content div{
+        margin-bottom: 0;
+        width: 90vw;
+    }
+
+    .bannerLogo{
+        text-align: center;
+    }
+
+    .bannerLogo img{
+        max-width: 280px;
+        padding-top: 0;
+    }
+
+    .bannerText{
+        font-size: 1.2em;
+        top: 41%; /*365*/
+        /*right: 22%;*/
+        line-height: 1.7rem;
+        text-align: center;
+    }
+
+    .scrollto{
+        margin-right: 0;
+    }
+
+    .button{
+        left: 40%;
+        top: 75%;
+        width: 200px;
+        height: 75px;
+    }
+
+    #wrapper{
+        flex-direction: column;
+    }
+
+    #fortune-wheel{
+        width: 320px;
+        height: 320px;
+    }
+
+    #fortune-wheel::before{
+        width: 310px;
+        height: 310px;
+    }
+
+    #fortune-wheel div.sec{
+        width: 23px;
+        border-width: 225px 135px 0;
+        transform-origin: 146px 245px;
+        left: 6%;
+        top: -25%;
+    }
+
+    span.fa.discount1{
+        margin-top: -99px !important;
+        font-size: 16px !important;
+        margin-left: -53px !important;
+        width: 121px;
+    }
+
+    span.fa.discount2{
+        margin-left: -51px !important;
+        margin-top: -108px !important;
+        width: 125px;
+        font-size: 16px !important;
+    }
+
+    span.fa.discount3{
+        font-size: 17px !important;
+        width: 92px;
+        margin-top: -98px !important;
+    }
+
+    span.fa.discount4{
+        font-size: 18px !important;
+        margin-top: -99px !important;
+    }
+
+    span.fa.discount5{
+        font-size: 18px !important;
+        margin-top: -103px !important;
+        margin-left: -27px !important;
+    }
+
+    span.fa.discount6{
+        font-size: 18px !important;
+        margin-top: -104px !important;
+    }
+
+    #spin{
+        left: 48%;
+        top: 288px;
+        width: 72px;
+        height: 72px;
+
+    }
+
+    #spin::before{
+        top: -15px;
+        left: 16px;
+
+    }
+
+    .prizes{
+        min-width: 300px;
+        max-width: 650px;
+        margin-top: 10%;
+    }
+
+    .fa-instagram, .fa-facebook-f {
+        font-size: 3.2em;
+    }
+
+    .fa-instagram:hover, .fa-facebook-f:hover {
+        font-size: 3.4em;
+    }
+
+    .popUp-container{
+        background-repeat: no-repeat;
+        background-image: url("23.png");
+    }
+
+    .popUp-body{
+        margin-top: 110px;
+        width: 70%;
+        height: 600px;
+        padding:10px;
+        background-color: rgba(255,255,255,0.89);
+        border-radius:5px;
+        box-shadow: 0 0 10px #dd2a1b;
+        text-align: center;
+    }
+
+    .wonPrize{
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .btn{
+        width: 200px;
+        height: 75px;
+        font-size: 25px;
+    }
+
+    h3{
+        font-size: 1.5em;
+    }
+
+    .textTime{
+        font-size: 25px;
+    }
+
+}
+
